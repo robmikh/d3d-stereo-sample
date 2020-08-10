@@ -464,6 +464,7 @@ void DirectXBase::CreateWindowSizeDependentResources()
     // for the right eye buffer.
     if (m_stereoEnabled)
     {
+        dxgiSurface = nullptr;
         winrt::check_hresult(
             dxgiBackBuffer->CreateSubresourceSurface(1, dxgiSurface.put())
         );
